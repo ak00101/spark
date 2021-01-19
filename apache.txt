@@ -1,0 +1,49 @@
+what is apache spark?
+cluster computing platform designed to be fast  and generarl purpose
+in memory computation
+designed to cover wide range of workload(machine learning,batch application,streaming,graph data processing)
+Integrates closely with other big data tools
+
+
+cluster manager
+Hadoop yarn
+apache mesos
+standalone scheduler 
+
+storage layer for spark
+HDFS and other storage system supported by hadoop Api(local filesystem,amazon s3,cassandra etc)
+ 
+
+spark core
+contains the basic funtionality of spark (task scheduling,memory management,fault recovery,interacting with storge system)
+
+spark sql
+spark's package for working with structured data
+allow developer to intermix sql with prgrammatic data manipulation supported by RDD in python ,scala
+
+spark streaming
+enable processing of live streams of data.
+
+MLib
+provides multiple types of machine learning algorithm
+
+graphx
+library for manipulating graph
+provide various operator for manipulating graph
+
+RDD:Resilient distributed dataset:
+1.fault tolerant distributed dataset
+2. in memory computation
+3.immutabilty
+4.partioning
+5.lazy evaluation
+6.caching
+
+RDD has two operations:
+transformation has two type:i) narrow transformation (map,filter,sample,union) ii) wide transformation(intersection,join) 
+var a = sc.textfile("hdfs://abc.txt") --> RDD0
+var b = a.filter(...)                 --> RDD1
+var c = c.distinct(.....)             --> RDD2 
+   
+action (count,collect,take)
+c.collect()
